@@ -1,5 +1,5 @@
 {
-  "name": "foldersize",
+  "name": "fsize",
   "version": "0.0.1",
   "description": "Get folder usage",
   "main": "index.js",
