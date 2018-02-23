@@ -1,10 +1,10 @@
 {
-  "name": "fsize",
+  "name": "checkfoldersize",
   "version": "0.0.1",
   "description": "Get folder usage",
   "main": "index.js",
   "scripts": {
-    "test": "TEST=true ./node_modules/mocha/bin/mocha",
+    "test": "./node_modules/mocha/bin/mocha",
     "build": "./node_modules/typescript/bin/tsc",
     "watch-ts": "./node_modules/typescript/bin/tsc -w"
   },
