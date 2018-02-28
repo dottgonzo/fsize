@@ -25,7 +25,7 @@ function getSizeInfo(path) {
                 }
                 else {
                     info.size = size;
-                    info.percentUsed = parseInt(((size * 100) / info.total).toFixed(1));
+                    info.percentUsed = parseInt(((info.available * 100) / info.total).toFixed(1));
                     resolve(info);
                 }
             });
