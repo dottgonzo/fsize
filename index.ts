@@ -35,7 +35,7 @@ export function getSizeInfo(path: string): Promise<ISizeInfo> {
 
         } else {
           info.size = size
-          info.percentUsed = parseInt(((info.available * 100) / info.total).toFixed(1))
+          info.percentUsed = 100-parseInt(((info.available * 100) / info.total).toFixed(1))
           resolve(info)
         }
 
