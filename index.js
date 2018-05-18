@@ -7,7 +7,8 @@ function getSizeInfo(path) {
     return new Promise((resolve, reject) => {
         getFolderSize(path, (err, size) => {
             if (err)
-                return reject(err);
+                size = false;
+            console.error({ error: err, function: 'getFolderSize' });
             diskfree.check(path, (error, info) => {
                 if (error) {
                     if (diskfree.isErrBadPath(err)) {

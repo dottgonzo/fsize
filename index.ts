@@ -18,7 +18,8 @@ export function getSizeInfo(path: string): Promise<ISizeInfo> {
   return new Promise<ISizeInfo>((resolve, reject) => {
 
     getFolderSize(path, (err, size) => {
-      if (err) return reject(err)
+      if (err) size = false
+      console.error({ error: err, function: 'getFolderSize' })
 
       diskfree.check(path, (error, info: ISizeInfo) => {
         if (error) {
