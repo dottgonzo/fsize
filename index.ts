@@ -18,8 +18,10 @@ export function getSizeInfo(path: string): Promise<ISizeInfo> {
   return new Promise<ISizeInfo>((resolve, reject) => {
 
     getFolderSize(path, (err, size) => {
-      if (err) size = false
-      console.error({ error: err, function: 'getFolderSize' })
+      if (err) {
+        size = false
+        console.error({ error: err, function: 'getFolderSize' })
+      }
 
       diskfree.check(path, (error, info: ISizeInfo) => {
         if (error) {
@@ -36,7 +38,7 @@ export function getSizeInfo(path: string): Promise<ISizeInfo> {
 
         } else {
           info.size = size
-          info.percentUsed = 100-parseInt(((info.available * 100) / info.total).toFixed(1))
+          info.percentUsed = 100 - parseInt(((info.available * 100) / info.total).toFixed(1))
           resolve(info)
         }
 
