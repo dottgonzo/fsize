@@ -6,9 +6,10 @@ const diskfree = require('diskfree');
 function getSizeInfo(path) {
     return new Promise((resolve, reject) => {
         getFolderSize(path, (err, size) => {
-            if (err)
+            if (err) {
                 size = false;
-            console.error({ error: err, function: 'getFolderSize' });
+                console.error({ error: err, function: 'getFolderSize' });
+            }
             diskfree.check(path, (error, info) => {
                 if (error) {
                     if (diskfree.isErrBadPath(err)) {
