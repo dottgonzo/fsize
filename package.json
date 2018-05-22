@@ -1,5 +1,5 @@
 {
-  "name": "checkfoldersize",
+  "name": "checkfoldersize2",
   "version": "0.0.16",
   "description": "Get folder usage",
   "main": "index.js",
