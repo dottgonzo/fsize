@@ -1,6 +1,6 @@
 {
   "name": "checkfoldersize",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Get folder usage",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/dottgonzo/fsize#readme",
   "dependencies": {
     "bluebird": "^3.5.1",
-    "disk-space": "github:Saevon/node-diskfree",
+    "diskfree": "github:Saevon/node-diskfree",
     "get-folder-size": "^1.0.1"
   },
   "devDependencies": {

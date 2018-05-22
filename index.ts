@@ -1,7 +1,7 @@
 import * as Promise from "bluebird"
 
 const getFolderSize = require("get-folder-size")
-const diskfree = require('disk-space');
+const diskfree = require('diskfree');
 
 export interface ISizeInfo {
   available: number

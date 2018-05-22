@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Promise = require("bluebird");
 const getFolderSize = require("get-folder-size");
-const diskfree = require('disk-space');
+const diskfree = require('diskfree');
 function getSizeInfo(path) {
     return new Promise((resolve, reject) => {
         getFolderSize(path, (err, size) => {
