@@ -8,7 +8,6 @@ function getSizeInfo(path) {
         getFolderSize(path, (err, size) => {
             if (err) {
                 size = false;
-                console.error({ error: err, function: 'getFolderSize' });
             }
             diskfree.check(path, (error, info) => {
                 if (error) {
